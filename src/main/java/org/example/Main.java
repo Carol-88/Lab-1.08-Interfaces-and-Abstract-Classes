@@ -5,6 +5,9 @@ import org.example.carInventorySystem.Sedan;
 import org.example.carInventorySystem.Truck;
 import org.example.carInventorySystem.UtilityVehicle;
 
+import org.example.videoStreamingService.Movie;
+import org.example.videoStreamingService.TvSeries;
+
 import java.math.BigDecimal;
 import static org.example.bigDecimalOperations.BigDecimalOperations.reverseSignAndRoundToTenth;
 import static org.example.bigDecimalOperations.BigDecimalOperations.roundToHundredth;
@@ -36,5 +39,9 @@ public class Main {
 
         //VideoStreamingService
         System.out.println("\n-------Task 3----------\n");
+        TvSeries breakingBad = new TvSeries("Breaking Bad", 60, 62);
+        System.out.println(breakingBad.getInfo());
+        Movie inception = new Movie("Inception", 148, 8.8);
+        System.out.println(inception.getInfo());
     }
 }
