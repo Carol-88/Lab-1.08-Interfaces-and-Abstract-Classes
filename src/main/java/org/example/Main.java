@@ -5,6 +5,10 @@ import org.example.carInventorySystem.Sedan;
 import org.example.carInventorySystem.Truck;
 import org.example.carInventorySystem.UtilityVehicle;
 
+import org.example.intListInterface.IntArrayList;
+import org.example.intListInterface.IntList;
+import org.example.intListInterface.IntVector;
+
 import org.example.videoStreamingService.Movie;
 import org.example.videoStreamingService.TvSeries;
 
@@ -43,5 +47,28 @@ public class Main {
         System.out.println(breakingBad.getInfo());
         Movie inception = new Movie("Inception", 148, 8.8);
         System.out.println(inception.getInfo());
+
+        //IntListInterface
+        System.out.println("\n-------Task 4----------\n");
+        IntArrayList list1 = new IntArrayList();
+        IntVector list2 = new IntVector();
+
+        for (int i = 0; i < 30; i++) {
+            list1.add(i);
+            list2.add(i);
+        }
+
+        System.out.println("IntArrayList:");
+        for (int i = 0; i < 30; i++) {
+            System.out.print(list1.get(i) + " ");
+        }
+
+        System.out.println("\nIntVector:");
+        for (int i = 0; i < 30; i++) {
+            System.out.print(list2.get(i) + " ");
+        }
+
+        System.out.println("\nCapacidad interna de IntArrayList: " + list1.internalCapacity());
+        System.out.println("Capacidad interna de IntVector: " + list2.internalCapacity());
     }
 }
